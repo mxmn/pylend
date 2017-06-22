@@ -42,7 +42,8 @@ class Connection:
         headers = {
             'Accept': self.__JSON_CONTENT_TYPE,
             'Authorization': self.__api_key,
-            'User-Agent': self.__PYLEND_USER_AGENT
+            'User-Agent': self.__PYLEND_USER_AGENT,
+            'X-LC-LISTING-VERSION': "1.2"
         }
 
         request_uri = self.__LENDINGCLUB_BASE_URI.format(api_version, resource)
